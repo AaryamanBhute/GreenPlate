@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block page_title_header%}
+GreenPlate
+{% endblock %}
+{% block content %}
+<ul class="results">
+{% for r in l %}
+    <li class="result" style="font-size: 2em"><a class="uline" href="https://www.google.com/search?q={{r.0}}">{{ r.0 }}</a></li>
+    <li class="result"><img src= "{{r.4}}" style="width:30%"></li>
+    <li class="result">Carbon Footprint Rating:</li>
+    <div class="leafimg">
+    	{% if r.1 == "1" %}
+	    <li class="result"><img src="https://i.ibb.co/tw6jMN8/1leaf-removebg-preview-1.png" alt="1leaf-removebg-preview-1" border="0"></li>
+	    {% elif r.1 == "2" %}
+	    <li class="result"><img src="https://i.ibb.co/Xsv5s8j/2leaf-removebg-preview-1.png" alt="2leaf-removebg-preview-1" border="0"></li>
+	    {% elif r.1 == "3" %}
+	    <li class="result"><img src="https://i.ibb.co/YRffWk3/3leaf-removebg-preview-1.png" alt="3leaf-removebg-preview-1" border="0"></li>
+	    {% elif r.1 == "4" %}
+	    <li class="result"><img src="https://i.ibb.co/2N0SV8X/4leaf-removebg-preview-1.png" alt="4leaf-removebg-preview-1" border="0"></li>
+	    {% elif r.1 == "5" %}
+	    <li class="result"><img src="https://i.ibb.co/2YTy6Dz/5-leaf-removebg-preview.png" alt="5-leaf-removebg-preview" border="0"></li>
+	    {% endif %}
+    </div>
+    <li class="result">Food Rating:</li>
+    <div class="starimg">
+    	{% if r.2 == 1 %}
+	    <li class="result"><img src="https://i.ibb.co/7nLXmZj/1star-removebg-preview-1.png" alt="1star-removebg-preview-1" border="0"></li>
+	    {% elif r.2 == 2 %}
+	    <li class="result"><img src="https://i.ibb.co/ZfzX1NM/2star-removebg-preview-1.png" alt="2star-removebg-preview-1" border="0"></li>
+	    {% elif r.2 == 3 %}
+	    <li class="result"><img src="https://i.ibb.co/vd2fwFP/3star-removebg-preview-1.png" alt="3star-removebg-preview-1" border="0"></li>
+	    {% elif r.2 == 4 %}
+	    <li class="result"><img src="https://i.ibb.co/chWxcHQ/4star-removebg-preview-1.png" alt="4star-removebg-preview-1" border="0"></li>
+	    {% elif r.2 == 5 %}
+	    <li class="result"><img src="https://i.ibb.co/1MgnBbf/5star-removebg-preview-1.png" alt="5star-removebg-preview-1" border="0"></li>
+	    {% endif %}
+    </div>
+    {% if r.3 == "No" %}
+    <li class="result"><span style="color: red;"> Not Currently Open</span></li>
+    {% else %}
+    <li class="result"><span style="color: green;">Currently Open</span></li>
+    {% endif %}
+{% endfor %}
+</ul>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block page_title_header%}
+About
+{% endblock %}
+{% block content %}
+<div class="center" style="padding-top:5vh">
+	<h1>About Us</h1>
+</div>
+<div class="center" style="padding-top: 5vh; padding-bottom: 5vh;">
+	<img src="https://i.ibb.co/m6y0b0v/google-map3-1080x630.jpg" alt="google-map3-1080x630" border="0">
+</div>
+<div class="center">
+	<div class="textbox">
+		<p><span style="color:green;">Green Plate</span> was developed by using the IP Geolocation API and the Google Maps API in order to get the user's IP address and derive a location from that information. This location, in latitude and longitude, is given to the Google Maps API which then provides information regarding the restaurants in the nearby area. These restaurants are then looked up in a curated database that stores information regarding the restaurants carbon footprint. This information is then displayed to the user!</p>
+	</div>
+</div>
+
+
+{% endblock %}

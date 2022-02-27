@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lan="en">
+<head>
+	<link rel="stylesheet" href="{% static 'main.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block page_title_header %}{% endblock %}</title>
+</head id=container>
+<body>
+	<div id=container>
+		<div class ="navbar sticky">
+			<a href="/"><img src="https://i.ibb.co/mFtNS13/Green-Plate-Logo.png" class="logo"></a>
+			<a href="/about" class="hover hover-4 navitem"> <span class="uline">About</span></a>
+			<a href="/contact" class="hover hover-4 navitem"> <span class="uline">Contact Us</span></a>
+			<a href="/future" class="hover hover-4 navitem"> <span class="uline">Future</span></a>
+			<a href="/carbon/find" class="hover hover-4 navitem"> <span class="uline">Carbon Calculator</span></a>
+		</div>
+		
+		<div id="body" style="padding-bottom: 10vh;">
+			{% block content %}
+			{% endblock %}
+		</div>
+		<div class="footer">
+			<div class="footdesc">
+				Green Plate is helping bring carbon footprint awareness to the consumer. The food industry has a massive effect on carbon and other greenhouse gas emmissions. Out goal is to educate the consumer and assist them in making more eco-friendly decisions regarding their eating habits. This will inevitably incentivise corporations
+				to create greener products thus slowing down climate change.
+			</div>
+			<div class="footernavwrapper">
+				<h1>Navigation</h1>
+				<ul class="footernav">
+					<li><a href="/about">About</a></li>
+					<li><a href="/contact">Contact Us</a></li>
+					<li><a href="/future">Future</a></li>
+					<li><a href="/carbon/find">Carbon Calculator</a></li>
+				</ul>
+			</div>
+			<div class="socialwrapper">
+				<div align="center" class="socialbtns">
+					<a href="/"><img src="https://i.ibb.co/mFtNS13/Green-Plate-Logo.png" class="logo" style="padding: 1vw;"></a>
+					<ul>
+						<li><a href="#" class="fa fa-lg fa-facebook"></a></li>
+						<li><a href="#" class="fa fa-lg fa-twitter"></a></li>
+						<li><a href="#" class="fa fa-lg fa-google-plus"></a></li>
+						<li><a href="#" class="fa fa-lg fa-github"></a></li>
+						<li><a href="#" class="fa fa-lg fa-pinterest"></a></li>
+						<li><a href="#" class="fa fa-lg fa-linkedin"></a></li>
+						<li><a href="#" class="fa fa-lg fa-instagram"></a></li>
+						<li><a href="#" class="fa fa-lg fa-youtube"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
