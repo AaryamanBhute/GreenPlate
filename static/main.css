@@ -31,7 +31,7 @@ p{
 	width: 101vw;
 	margin-left: -1vw;
 	margin-top: -1.2vh;
-	column-gap: 4vw;
+	column-gap: 1vw;
 	background: #c8e1cc;
 	z-index: 10;
 }
